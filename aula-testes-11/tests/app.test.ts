@@ -64,7 +64,7 @@ describe("GET /users tests", () => {
       password: "teste"
     };
 
-    await createManyUser(userData);
+    await createManyUser(userData, "teste2@teste.com.br");
 
     const { status, body } = await api.get("/users");
     expect(status).toBe(200);
